@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --color-gold: #D4AF37;
+  --color-gold-secondary: #B88A2A;
+  --color-gold-light: rgba(212, 175, 55, 0.06);
+  
+  --color-navy: #0A1128;
+  --color-navy-dark: #060A17;
+  --color-maroon: #800020;
+  --color-maroon-hover: #9E1B32;
+  --color-maroon-dark: #4A0E17;
+  --color-maroon-light: rgba(128, 0, 32, 0.08);
+  
+  --color-text-light: #F3F4F6;
+  --color-text-muted: #9CA3AF;
+  --color-border-subtle: rgba(212, 175, 55, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #060A17;
+    color: #F3F4F6;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #060A17;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.15);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.35);
+  }
+}
